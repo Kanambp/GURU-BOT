@@ -26,10 +26,10 @@ await displayLoadingScreen(conn, m.chat)
             },
       forwardingScore: 999,
       externalAdReply: {
-      title: "ᴛʜᴇ ɢᴜʀᴜ-ʙᴏᴛ",
+      title: "ᴛʜᴇ KANAMBO-ʙᴏᴛ",
       body: "R U N T I M E",
       thumbnailUrl: pp,
-      sourceUrl: 'https://guruapi.tech',
+      sourceUrl: 'https://github.com/Kanambp/GURU-BOT',
       mediaType: 1,
       renderLargerThumbnail: false
       }}})
