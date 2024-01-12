@@ -45,42 +45,11 @@ _*Hello ${taguser} thank you for choosing KANAMBO-BOT*_
 ┊ 📅   *𝘿𝘼𝙏𝙀:* ${date}
 ┊ ⏲️   *𝙏𝙄𝙈𝙀:* ${wib}
 └── •✧✧• ───────┘ 
-function addToElement(t) {
-    const dateRegexMatch = new RegExp("(\\d\\d\\d\\d)-(\\d\\d)-(\\d\\d)$").exec(
-        t.textContent
-    );
-
-    if (!!dateRegexMatch && dateRegexMatch.length == 4) {
-        const journalDate = new Date(
-            dateRegexMatch[1] +
-                " " +
-                dateRegexMatch[2] +
-                " " +
-                dateRegexMatch[3]
-        );
-
-        const startDate = new Date(journalDate.getFullYear(), 0, 1);
-        const days = Math.floor(
-            (journalDate - startDate) / (24 * 60 * 60 * 1000)
-        );
-        const weekNumber = Math.ceil(days / 7);
-
-        const dayOfWeekName = journalDate.toLocaleString("default", {
-            weekday: "long",
-        });
-
-        const span = document.createElement("span");
-        span.style = "opacity:0.5;font-size:0.7em";
-        span.innerHTML = " " + dayOfWeekName + ", Week " + weekNumber;
-        t.append(span);
-    }
-}
-var t = setInterval(insertInfo, 1000);
-
 ≻───── ⋆✩⋆ ─────≺
 ✎𝙐𝙎𝙀 ${usedPrefix}list 𝑻𝑶 𝑺𝑬𝑬 𝑨𝑳𝑳 𝑪𝑶𝑴𝑴𝑨𝑵𝑫𝑺
 ≻───── ⋆✩⋆ ─────≺
-_*© kanambo 2024*_
+
+        _*© kanambo 2024*_
 `
     conn.sendFile(m.chat, pp, 'perfil.jpg', str, m, false, { mentions: [who] })
     m.react(done)
